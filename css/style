@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+.caja{width:100%; height: auto;}
+.caja img{width: 50%; height:auto;}
+
+.zapato{width:100%; height: auto;}
+.zapato img{width:75%; height: auto;}
+
+.lapiz video{width: 500px !important; height: auto;}
+
+.navbar-brand img{width: 20px; height: auto;}
