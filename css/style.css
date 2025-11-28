@@ -4,7 +4,7 @@
     font-family: "Urbanist", sans-serif;
 }
 
-
+/*ESTO ES LA RESPONSABILIDAD*/
 /* xs applies to x-small devices ( )*/
 @media (min-width: 99px) and (max-width: 575.98px){
     .teaser_movil{display:block}
@@ -63,7 +63,8 @@
 }
 
 /* --- SECCIÓN DE BENEFICIOS --- */
-.beneficios{background: #dbdadf; padding: 1.5em 1em;}
+/* AJUSTE: Se aumentó el padding-bottom para separarlo de Testimonios */
+.beneficios{background: #dbdadf; padding: 1.5em 1em 5em 1em;}
 
 .beneficios h2{text-align: center; color: #422f67;  font-family: "Urbanist", sans-serif; font-weight: 700; padding: 0.5em 2em; margin-top: 0; font-size: 2.5rem;} 
 
@@ -98,19 +99,48 @@
     }
 }
 
-.beneficio-titulo {display: flex; flex-direction: column; align-items: flex-start;}
-.recuadro{width: auto; height: 40px; background: #422f67; border-radius: 20px; padding: 0.3em 1em; margin-bottom: 0.5em;}
-.beneficio-titulo h4 {margin: 0; color: #fff; font-weight: 700; font-size: 1.25rem;}
-.beneficio-titulo h5 {margin: 0; color: #422f67; font-weight: 400; margin-top: 0; font-size: 1.1rem;}
+.beneficio-titulo {
+	display: flex; 
+	flex-direction: column; 
+	align-items: flex-start;
+}
+.recuadro{
+	width: auto; 
+	height: 40px; 
+	background: #422f67; 
+	border-radius: 20px; 
+	padding: 0.3em 1em; 
+	margin-bottom: 0.5em;
+}
+.beneficio-titulo h4 {
+	margin: 0; 
+	color: #fff; 
+	font-weight: 700; 
+	font-size: 1.25rem;}
+.beneficio-titulo h5 {
+	margin: 0; 
+	color: #422f67; 
+	font-weight: 400; 
+	margin-top: 0; 
+	font-size: 1.1rem;}
 
-.fondo-morado{width: 40px; height: 40px; border-radius: 50%; background: #422f67; display: flex; align-items: center; 
-    justify-content: center; flex-shrink: 0;}
-.fondo-morado img {width: 60%; height: auto}
+.fondo-morado{
+	width: 40px; 
+	height: 40px; 
+	border-radius: 50%; 
+	background: #422f67; 
+	display: flex; 
+	align-items: center; 
+    justify-content: center; 
+	flex-shrink: 0;}
+.fondo-morado img {width: 60%; 
+	height: auto}
 
 /* --- SECCIÓN DE TESTIMONIOS --- */
 .testimonios {
     background: #dbdadf; /* Mismo fondo que beneficios */
-    padding: 2em 1em 5em 1em;
+    /* Mantenemos el padding alto para dar espacio del título a las tarjetas */
+    padding: 2em 1em 5em 1em; 
     text-align: center;
 }
 
@@ -199,9 +229,10 @@
 }
 
 /* --- SECCIÓN DE FUNCIONAMIENTO --- */
+/* AJUSTE: Se aumentó el padding-top para bajar la sección. */
 .funcionamiento {
     background: #dbdadf; /* Mismo fondo */
-    padding: 3em 1em 5em 1em;
+    padding: 5em 1em 5em 1em; 
     text-align: center;
 }
 
@@ -258,12 +289,12 @@
     margin: auto;
 }
 .paso-imagen.paso-imagen-2 {
-     /* Estilo del recuadro de la botella */
+      /* Estilo del recuadro de la botella */
     max-width: 150px;
     margin: auto;
 }
 .paso-imagen.paso-imagen-3 {
-     /* Estilo del recuadro de la cara */
+      /* Estilo del recuadro de la cara */
     max-width: 150px;
     margin: auto;
 }
