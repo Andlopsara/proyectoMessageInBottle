@@ -25,7 +25,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
     
 <body>
@@ -37,38 +36,41 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item mx-3">
-          <a class="nav-link active text-decoration-none text-white" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active text-decoration-none text-white" aria-current="page" href="#inicio">Inicio</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-decoration-none text-white" href="#">Beneficios</a>
+          <a class="nav-link text-decoration-none text-white" href="#beneficios">Beneficios</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-decoration-none text-white" href="#">Testimonios</a>
+          <a class="nav-link text-decoration-none text-white" href="#testimonios">Testimonios</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-decoration-none text-white" href="#">Funcionamiento</a>
+          <a class="nav-link text-decoration-none text-white" href="#funcionamiento">Funcionamiento</a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link text-decoration-none text-white" href="#">Descarga</a>
+          <a class="nav-link text-decoration-none text-white" href="#descarga">Descarga</a>
         </li>
           <li class="nav-item mx-3">
-          <a class="nav-link text-decoration-none text-white" href="#">Contacto</a>
+          <a class="nav-link text-decoration-none text-white" href="#contacto">Contacto</a>
         </li>
       </ul>
     </div>
 </nav>
+    
+    <div id="inicio"> 
+        <div class="teaser_ordenador">
+            <video controls>
+            <source src="video/teaser_ordenador.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="teaser_movil">
+            <video controls>
+            <source src="video/video_movil.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
 
-    <div class="teaser_ordenador">
-        <video controls>
-        <source src="video/teaser_ordenador.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="teaser_movil">
-        <video controls>
-        <source src="video/video_movil.mp4" type="video/mp4">
-        </video>
-    </div>
-<div class="beneficios">
+<div class="beneficios" id="beneficios">
     <h2>¿Por qué descargar Message in a Bottle?</h2>
     <div class="row m-0 p-0 justify-content-center">
         <div class="beneficios-texto"><h5>A veces un simple mensaje puede cambiar el rumbo de tu día. Message in a Bottle no es solamente una app, es un espacio para conectar, inspirar, y compartir energía positiva con el mundo.</h5>
@@ -170,7 +172,7 @@
     </div>  
 </div>
 
-<div class="testimonios">
+<div class="testimonios" id="testimonios">
     <h2>Testimonios</h2>
     <div class="testimonio-contenedor">
         <span class="flecha d-none d-md-block">
@@ -182,7 +184,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
                 <div class="testimonio-bloque">
                     <div class="testimonio-perfil">
-                        <img src="image/kenji.jpg" alt="Perfil Kenji T.">
+                        <img src="image/kenji.jpeg" alt="Perfil Kenji T.">
                     </div>
                     <p class="testimonio-texto">"Nunca pensé que unas palabras anónimas pudieran motivarme tanto. Esta app es como un océano lleno de pequeños milagros".</p>
                     <div class="testimonio-autor">
@@ -194,7 +196,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
                 <div class="testimonio-bloque">
                     <div class="testimonio-perfil">
-                         <img src="image/lucia.jpg" alt="Perfil Lucía R.">
+                         <img src="image/Lucia.jpeg" alt="Perfil Lucía R.">
                     </div>
                     <p class="testimonio-texto">"Me encanta escribir botellas. Saber que en algún lugar alguien sonríe al leerlas me llena el corazón".</p>
                     <div class="testimonio-autor">
@@ -206,7 +208,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-5">
                 <div class="testimonio-bloque">
                     <div class="testimonio-perfil">
-                        <img src="image/maria.jpg" alt="Perfil María C.">
+                        <img src="image/Maria.jpeg" alt="Perfil María C.">
                     </div>
                     <p class="testimonio-texto">"Recibir una botella en medio de un mal día fue como encontrar un rayo de sol en plena tormenta. Gracias por crear algo tan especial".</p>
                     <div class="testimonio-autor">
