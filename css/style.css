@@ -86,14 +86,14 @@
 
 /* Alineación para pantallas grandes (Tablets grandes y Desktop) */
 @media (min-width: 991.98px) {
-    /* Mueve los elementos de la columna izquierda hacia el centro (alineación a la derecha) */
+    /* AJUSTE: Mueve los elementos de la columna izquierda más cerca del centro (50px) */
     .beneficio-contenido-izq {
         margin-left: auto;
-        margin-right: 25px; /* Ajuste para acercar al centro */
+        margin-right: 50px; 
     }
-    /* Mantiene los elementos de la columna derecha alineados a la izquierda (hacia el centro) */
+    /* AJUSTE: Mantiene los elementos de la columna derecha más cerca del centro (50px) */
     .beneficio-contenido-der {
-        margin-left: 25px; /* Ajuste para acercar al centro */
+        margin-left: 50px; 
         margin-right: auto;
     }
 }
@@ -107,7 +107,7 @@
     justify-content: center; flex-shrink: 0;}
 .fondo-morado img {width: 60%; height: auto}
 
-/* --- NUEVA SECCIÓN DE TESTIMONIOS --- */
+/* --- SECCIÓN DE TESTIMONIOS --- */
 .testimonios {
     background: #dbdadf; /* Mismo fondo que beneficios */
     padding: 2em 1em 5em 1em;
@@ -196,4 +196,98 @@
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* --- SECCIÓN DE FUNCIONAMIENTO --- */
+.funcionamiento {
+    background: #dbdadf; /* Mismo fondo */
+    padding: 3em 1em 5em 1em;
+    text-align: center;
+}
+
+.funcionamiento h2 {
+    color: #422f67;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+}
+
+.funcionamiento-texto {
+    max-width: 800px;
+    margin: auto;
+    color: #422f67;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 3em;
+}
+
+/* Estilo de las tarjetas de pasos */
+.paso-tarjeta {
+    background: #422f67;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px; /* Espacio entre tarjetas en móvil */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura si están en un .row */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el contenido de la tarjeta */
+.paso-contenido {
+    color: #fff;
+    padding-bottom: 40px; /* Espacio para el número */
+    text-align: center;
+}
+
+.paso-imagen img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    /* Estilo específico para el ejemplo de la imagen 1 (teléfono) */
+    background: #5b4683;
+    padding: 15px;
+    border-radius: 10px;
+}
+.paso-imagen.paso-imagen-1 {
+    /* Estilo del recuadro del teléfono si es necesario */
+    max-width: 150px;
+    margin: auto;
+}
+.paso-imagen.paso-imagen-2 {
+     /* Estilo del recuadro de la botella */
+    max-width: 150px;
+    margin: auto;
+}
+.paso-imagen.paso-imagen-3 {
+     /* Estilo del recuadro de la cara */
+    max-width: 150px;
+    margin: auto;
+}
+
+
+.paso-contenido p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Estilo del número de paso (círculo morado oscuro) */
+.paso-numero {
+    position: absolute;
+    bottom: -25px; /* Sobresale de la tarjeta */
+    width: 50px;
+    height: 50px;
+    background: #5b4683; /* Tono de morado más oscuro si es necesario */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    border: 5px solid #dbdadf; /* Borde del color de fondo de la sección */
 }
