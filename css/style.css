@@ -197,3 +197,112 @@
         margin-right: auto;
     }
 }
+
+/* --- SECCIÓN DE FUNCIONAMIENTO (ACTUALIZADA V2) --- */
+.funcionamiento {
+    background: #ffffff; /* Fondo blanco */
+    padding: 3em 1em 6em 1em; /* Más espacio en la parte inferior para los números */
+    text-align: center;
+}
+
+.funcionamiento h2 {
+    color: #422f67;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+.funcionamiento p {
+    color: #422f67;
+    max-width: 800px;
+    margin: 0 auto 3em auto;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.pasos-contenedor {
+    display: flex;
+    flex-direction: column; /* Para apilar en móvil */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .pasos-contenedor {
+        flex-direction: row; /* En fila para tablet y desktop */
+    }
+}
+
+.paso-bloque {
+    width: 80%;
+    max-width: 220px; /* Reducción del ancho del bloque */
+    height: 300px; /* Altura consistente */
+    background-color: #9082a6; /* Morado/Púrpura de los bloques de la imagen */
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre imagen y texto */
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    text-align: center;
+}
+
+.paso-imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Estilo unificado para todas las imágenes centrales (Paso 1, 2 y 3) */
+.paso-imagen-central {
+    width: 100%;
+    height: 150px; /* Altura para el contenedor de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paso-imagen-central img {
+    max-width: 200%; /* Ajuste para que la imagen ocupe bien el espacio */
+    max-height: 180px;
+    height: auto;
+}
+
+.paso-texto {
+    font-size: 1.25rem; 
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 15px;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio antes del número */
+    display: flex;
+    align-items: flex-end; 
+    padding-bottom: 20px; /* Espacio para el número */
+}
+
+/* Estilo del número en la parte inferior */
+.paso-numero {
+    width: 50px; 
+    height: 50px;
+    background: #422f67; /* Morado oscuro */
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #422f67; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
