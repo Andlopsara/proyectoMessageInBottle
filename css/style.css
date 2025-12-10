@@ -3,7 +3,8 @@
 * {
     font-family: "Urbanist", sans-serif;
 }
-/*ESTO ES LA RESPONSABILIDAD*/
+
+
 /* xs applies to x-small devices ( )*/
 @media (min-width: 99px) and (max-width: 575.98px){
     .teaser_movil{display:block}
@@ -49,6 +50,7 @@
     .navbar-brand img{width:250px; height:auto;}
     .navbar {background:#422f67 !important}
 }
+
 /* xll applies to x-large devices (large desktops, less than 1400px)*/
 @media (min-width: 1399.98px){
     .teaser_ordenador{display:block}
@@ -57,13 +59,18 @@
     .teaser_movil{display: none;}
     .navbar-brand img{width:250px; height:auto;}
     .navbar {background:#422f67 !important}
+    
 }
+
 /* --- SECCIÓN DE BENEFICIOS --- */
-/* AJUSTE: Se aumentó el padding-bottom para separarlo de Testimonios */
-.beneficios{background: #dbdadf; padding: 1.5em 1em 5em 1em;}
-.beneficios h2{text-align: center; color: #422f67; font-family: "Urbanist", sans-serif; font-weight: 700; padding: 0.5em 2em; margin-top: 0; font-size: 2.5rem;} 
+.beneficios{background: #dbdadf; padding: 1.5em 1em;}
+
+.beneficios h2{text-align: center; color: #422f67;  font-family: "Urbanist", sans-serif; font-weight: 700; padding: 0.5em 2em; margin-top: 0; font-size: 2.5rem;} 
+
 .beneficios-texto{text-align:center; max-width: 800px; margin: auto; padding: 0em 1em 3.5em 1em;}
+
 .beneficios-texto h5{color: #422f67; font-weight: 400; font-size: 1.2rem; line-height: 1.5;}
+
 /* Estilo base: Centrado en móviles */
 .beneficio-contenido{
     display: flex; 
@@ -76,61 +83,37 @@
     margin-left: auto; /* Centrado en pantallas pequeñas/medianas */
     margin-right: auto; /* Centrado en pantallas pequeñas/medianas */
 }
+
 /* Alineación para pantallas grandes (Tablets grandes y Desktop) */
 @media (min-width: 991.98px) {
-    /* AJUSTE: Mueve los elementos de la columna izquierda más cerca del centro (50px) */
+    /* Mueve los elementos de la columna izquierda hacia el centro (alineación a la derecha) */
     .beneficio-contenido-izq {
         margin-left: auto;
-        margin-right: 50px; 
+        margin-right: 25px; /* Ajuste para acercar al centro */
     }
-    /* AJUSTE: Mantiene los elementos de la columna derecha más cerca del centro (50px) */
+    /* Mantiene los elementos de la columna derecha alineados a la izquierda (hacia el centro) */
     .beneficio-contenido-der {
-        margin-left: 50px; 
+        margin-left: 25px; /* Ajuste para acercar al centro */
         margin-right: auto;
     }
 }
-.beneficio-titulo {
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start;
-}
-.recuadro{
-    width: auto; 
-    height: 40px; 
-    background: #422f67; 
-    border-radius: 20px; 
-    padding: 0.3em 1em; 
-    margin-bottom: 0.5em;
-}
-.beneficio-titulo h4 {
-    margin: 0; 
-    color: #fff; 
-    font-weight: 700; 
-    font-size: 1.25rem;}
-.beneficio-titulo h5 {
-    margin: 0; 
-    color: #422f67; 
-    font-weight: 400; 
-    margin-top: 0; 
-    font-size: 1.1rem;}
-.fondo-morado{
-    width: 40px; 
-    height: 40px; 
-    border-radius: 50%; 
-    background: #422f67; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    flex-shrink: 0;}
-.fondo-morado img {width: 60%; 
-    height: auto}
-/* --- SECCIÓN DE TESTIMONIOS --- */
+
+.beneficio-titulo {display: flex; flex-direction: column; align-items: flex-start;}
+.recuadro{width: auto; height: 40px; background: #422f67; border-radius: 20px; padding: 0.3em 1em; margin-bottom: 0.5em;}
+.beneficio-titulo h4 {margin: 0; color: #fff; font-weight: 700; font-size: 1.25rem;}
+.beneficio-titulo h5 {margin: 0; color: #422f67; font-weight: 400; margin-top: 0; font-size: 1.1rem;}
+
+.fondo-morado{width: 40px; height: 40px; border-radius: 50%; background: #422f67; display: flex; align-items: center; 
+    justify-content: center; flex-shrink: 0;}
+.fondo-morado img {width: 60%; height: auto}
+
+/* --- NUEVA SECCIÓN DE TESTIMONIOS --- */
 .testimonios {
     background: #dbdadf; /* Mismo fondo que beneficios */
-    /* Mantenemos el padding alto para dar espacio del título a las tarjetas */
-    padding: 2em 1em 5em 1em; 
+    padding: 2em 1em 5em 1em;
     text-align: center;
 }
+
 .testimonios h2 {
     color: #422f67;
     font-family: "Urbanist", sans-serif;
@@ -138,12 +121,14 @@
     margin-bottom: 2em; /* Espacio debajo del título */
     font-size: 2.5rem;
 }
+
 .testimonio-contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px; /* Espacio entre flechas y testimonios en desktop */
 }
+
 /* Estilo de los bloques de testimonio */
 .testimonio-bloque {
     background: #422f67;
@@ -157,6 +142,7 @@
     text-align: left;
     min-height: 250px;
 }
+
 /* Estilo de la imagen de perfil */
 .testimonio-perfil {
     position: absolute;
@@ -169,23 +155,27 @@
     overflow: hidden;
     border: 5px solid #dbdadf; /* Borde del color de fondo de la sección */
 }
+
 .testimonio-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 /* Estilo del texto del testimonio */
 .testimonio-texto {
     font-size: 1.1rem;
     line-height: 1.4;
     margin-top: 45px; /* Empuja el texto debajo del espacio de la imagen */
 }
+
 /* Estilo del nombre del autor */
 .testimonio-autor {
     font-weight: 700;
     margin-top: 15px;
     text-align: center;
 }
+
 /* Estilo de las flechas (usaremos íconos de Font Awesome o caracteres especiales si no se usa FA) */
 /* Para simplificar, usaremos las clases de Bootstrap para centrar las flechas si las tienes */
 .flecha {
@@ -196,6 +186,7 @@
     transition: opacity 0.3s;
     /* Ocultamos las flechas en móvil si no son necesarias */
 }
+
 @media (max-width: 767.97px) {
     .flecha {
         display: none;
@@ -205,97 +196,4 @@
         margin-left: auto;
         margin-right: auto;
     }
-}
-/* --- SECCIÓN DE FUNCIONAMIENTO --- */
-/* AJUSTE: Se aumentó el padding-top para bajar la sección. */
-.funcionamiento {
-    background: #dbdadf; /* Mismo fondo */
-    padding: 5em 1em 5em 1em; 
-    text-align: center;
-}
-.funcionamiento h2 {
-    color: #422f67;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    font-size: 2.5rem;
-}
-.funcionamiento-texto {
-    max-width: 800px;
-    margin: auto;
-    color: #422f67;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 3em;
-}
-/* Estilo de las tarjetas de pasos */
-.paso-tarjeta {
-    background: #422f67;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 25px; /* Espacio entre tarjetas en móvil */
-    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura si están en un .row */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-/* Estilo para el contenido de la tarjeta */
-.paso-contenido {
-    color: #fff;
-    padding-bottom: 40px; /* Espacio para el número */
-    text-align: center;
-}
-.paso-imagen img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    /* Estilo específico para el ejemplo de la imagen 1 (teléfono) */
-    background: #5b4683;
-    padding: 15px;
-    border-radius: 10px;
-}
-.paso-imagen.paso-imagen-1 {
-    /* Estilo del recuadro del teléfono si es necesario */
-    max-width: 150px;
-    margin: auto;
-}
-.paso-imagen.paso-imagen-2 {
-    /* Estilo del recuadro de la botella */
-    max-width: 150px;
-    margin: auto;
-}
-.paso-imagen.paso-imagen-3 {
-    /* Estilo del recuadro de la cara */
-    max-width: 150px;
-    margin: auto;
-}
-.paso-contenido p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 0;
-}
-/* Estilo del número de paso (círculo morado oscuro) */
-.paso-numero {
-    position: absolute;
-    bottom: -25px; /* Sobresale de la tarjeta */
-    width: 50px;
-    height: 50px;
-    background: #5b4683; /* Tono de morado más oscuro si es necesario */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #fff;
-    border: 5px solid #dbdadf; /* Borde del color de fondo de la sección */
-}
-/* ========================================================= */
-/* AJUSTE PARA COMPENSAR EL MENÚ FIJO (fixed-top) */
-/* Ajustado a 120px para asegurar que no se vea la franja blanca. */
-/* ========================================================= */
-#inicio, #beneficios, #testimonios, #funcionamiento, #descarga, #contacto {
-    scroll-margin-top: 80px; 
 }
