@@ -267,7 +267,7 @@
 <div class="descarga" id="descarga">
     
     <div class="descarga-phone-container">
-        <img src="image/phone.png" alt="Aplicación Message in a Bottle en un teléfono">
+        <img src="image/telefono-app_Mesa de trabajo 1.svg" alt="Aplicación Message in a Bottle en un teléfono">
     </div>
     
     <div class="descarga-texto-botones">
@@ -299,8 +299,71 @@
         </div>
     </div>
 </div>
-<div id="contacto">
+<div class="contacto" id="contacto">
+    
+    <div class="contacto-fondo"></div>
+    <h2 class="contacto-titulo">Contacto</h2>
+    <p>¿Tienes preguntas, ideas o simplemente quieres lanzar unas palabras hacia nosotros?</p>
+    <p>Esta es tu botella para llegar al equipo de Message in a Bottle.</p>
+
+    <div class="formulario-contenedor">
+        <form action="#" method="POST">
+            
+            <div class="formulario-grupo">
+                <label for="nombre">Nombre*</label>
+                <input type="text" id="nombre" name="nombre" class="formulario-campo" placeholder="Ejemplo: Iván" required>
+            </div>
+            
+            <div class="formulario-grupo">
+                <label for="correo">Correo electrónico*</label>
+                <input type="email" id="correo" name="correo" class="formulario-campo" placeholder="Ejemplo: micorreo@gmail.com" required>
+            </div>
+            
+            <div class="formulario-grupo mensaje">
+                <label for="mensaje">Tu mensaje*</label>
+                <textarea id="mensaje" name="mensaje" class="formulario-campo" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+                <img src="../image/iconBot.png" alt="Icono de botella flotante" class="botella-decorativa desktop">
+
+                <button type="submit" class="boton-enviar d-none d-md-flex">
+                    ENVIAR BOTELLA
+                </button>
+            </div>
+            
+        </form>
     </div>
 
+    <div class="boton-enviar-contenedor d-md-none">
+        
+        <img src="../image/iconBot.png" alt="Icono de botella flotante" class="botella-decorativa movil">
+        
+        <button type="submit" class="boton-enviar">
+            ENVIAR BOTELLA
+        </button>
+    </div>
+    
+</div> <footer class="footer">
+    <div class="footer-contenido">
+        
+        <div class="footer-info-legal">
+            <div class="footer-logo">
+                <img src="../image/logo.png" alt="Message in a Bottle Logo" class="logo-icono">
+                <span class="logo-texto">Message in a Bottle</span>
+            </div>
+            <p class="copyright">© 2025 Message in a Bottle. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="footer-enlaces-legales">
+            <a href="#" class="enlace-legal">Términos y Condiciones</a>
+            <a href="#" class="enlace-legal">Aviso de Privacidad</a>
+        </div>
+
+        <div class="footer-redes">
+            <a href="#" aria-label="Síguenos en Facebook" class="red-social-icono"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram" class="red-social-icono"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Síguenos en TikTok" class="red-social-icono"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

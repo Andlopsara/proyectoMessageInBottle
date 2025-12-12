@@ -310,12 +310,15 @@
 }
 
 /* --- SECCIÓN DE DESCARGA (AJUSTADA AL DISEÑO DE IMAGEN) --- */
+
 .descarga {
-    /* Usamos el fondo de imagen con la ruta asumida */
-    background-image: url('../image/fondo2.jpeg'); 
+    /* Fondo: Morado claro con elementos de playa (nubes, pájaros, palmeras) */
+    background-image: url('../image/fondo-playa_Mesa\ de\ trabajo\ 1.svg'); 
+    background-color: #e5e0ed; /* Morado base claro (ajusta si tu SVG tiene otro fondo) */
     background-size: cover;
-    background-position: center;
-    padding: 4em 1em;
+    background-position: center bottom; /* Posiciona bien los elementos de playa */
+    padding: 5em 1em; /* Espaciado general */
+    width: 100%; /* Ocupa el ancho completo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,61 +328,64 @@
 
 @media (min-width: 992px) {
     .descarga {
-        flex-direction: row; /* En desktop, el contenido va en fila */
+        flex-direction: row; /* En desktop, el contenido va en fila (teléfono a la izquierda) */
         text-align: left;
-        justify-content: center;
+        justify-content: center; /* Centramos el contenido principal */
         gap: 50px;
-        padding: 15em 1em;
+        padding: 8em 3em; /* Ajuste para desktop */
     }
 }
 
 /* Contenedor del teléfono */
 .descarga-phone-container {
     width: 100%;
-    max-width: 300px; 
+    max-width: 350px; /* Tamaño del teléfono en la imagen de referencia */
     margin-bottom: 30px;
-    order: 1; 
+    order: 1; /* El teléfono va arriba en móvil */
 }
 
 @media (min-width: 992px) {
     .descarga-phone-container {
-        order: 0; 
-        max-width: 350px;
+        order: 0; /* El teléfono va a la izquierda en desktop */
+        max-width: 380px; /* Un poco más grande en desktop */
         margin-bottom: 0;
+        /* Para mover la imagen del teléfono más a la izquierda, puedes jugar con márgenes */
+        margin-right: 50px; 
     }
 }
 
 .descarga-phone-container img {
-    width: 100%;
+    width: 80%;
     height: auto;
-    /* Ajustes para que la imagen del teléfono sobresalga un poco */
-    margin-top: -30px; 
-    margin-left: -30%;
+    margin-top: 0; 
+    margin-left: -15%; 
 }
 
 /* Contenedor del texto y botones */
 .descarga-texto-botones {
     order: 2; 
-    max-width: 550px;
+    margin-top: 10%;
+    margin-right: 10%;
+    max-width: 500px; /* Ajustamos para que el texto principal no sea demasiado ancho */
 }
 
 /* Estilos de los títulos */
 .descarga-texto-botones p {
     font-family: "Urbanist", sans-serif;
     font-size: 1.2rem;
-    font-weight: 700; /* Se ve más grueso en la imagen de referencia */
+    font-weight: 500; /* Lo ajustamos a 500 para el texto de introducción */
     margin-bottom: 0.5em;
     color: #422f67;
 }
 
 .descarga-texto-botones h3 {
-    font-family: 'Passero One', cursive; /* Fuente del título */
-    font-size: 3.5rem; /* Más grande para el título principal */
+    font-family: 'Passero One', cursive; /* Fuente del título principal (Message in a Bottle) */
+    font-size: 3rem; /* Hacemos el título más grande */
     line-height: 1.1;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.5em;
     color: #422f67; 
-    font-weight: 400; 
-    text-transform: uppercase;
+    font-weight: 800; 
+    text-transform: capitalize; /* El título en la imagen NO está en mayúsculas */
 }
 
 .descarga-texto-botones h4 {
@@ -387,7 +393,7 @@
     font-weight: 500;
     font-size: 1.35rem;
     margin-top: 10px;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em; /* Reducimos el margen inferior entre las dos líneas de texto de bajada */
     color: #422f67;
 }
 
@@ -396,7 +402,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 1.5em;
+    margin-top: 2em;
     align-items: center; /* Centrados en móvil */
 }
 
@@ -404,7 +410,8 @@
     .descarga-botones {
         flex-direction: row;
         gap: 25px;
-        align-items: flex-start; /* Alineados a la izquierda para desktop */
+        align-items: center; /* Alineamos al centro para que queden parejos */
+        justify-content: flex-start; /* Alineados a la izquierda para desktop */
     }
 }
 
@@ -412,11 +419,11 @@
 .descarga-boton {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px; /* Espacio entre ícono y texto */
-    width: 200px; /* Ancho fijo para botones */
-    height: 60px;
-    background-color: #422f67; /* Morado Oscuro del Navbar */
+    justify-content: center; /* Centramos el contenido dentro del botón */
+    gap: 10px; /* Espacio entre ícono y texto */
+    width: 240px; /* Ancho ajustado para que coincida con la imagen */
+    height: 70px;
+    background-color: #422f67; /* Morado Oscuro */
     border-radius: 10px;
     color: #ffffff;
     text-decoration: none;
@@ -432,7 +439,7 @@
 
 /* Estilo del ícono dentro del botón */
 .descarga-boton i {
-    font-size: 2rem; /* Tamaño grande para el ícono */
+    font-size: 2.5rem; /* Tamaño grande para el ícono */
     flex-shrink: 0;
 }
 
@@ -440,15 +447,359 @@
 .descarga-boton-texto {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.2;
+    text-align: left; /* El texto dentro del botón va a la izquierda */
 }
 
 .descarga-boton-texto small {
-    font-size: 0.75rem;
-    font-weight: 400;
+    font-size: 0.9rem; /* Texto superior más visible */
+    font-weight: 500;
 }
 
 .descarga-boton-texto span {
+    font-size: 1.2rem; /* Nombre de la tienda más grande */
+    font-weight: 700;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- SECCIÓN DE CONTACTO (Botón redondo, Imagen <img/> posicionada) --- */
+/* ---------------------------------------------------------------------- */
+
+.contacto {
+    min-height: 620px;
+    padding: 3em 1em 0; 
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* --- Títulos, Párrafos y Campos --- */
+
+.contacto-titulo {
+    color: #422f67;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    z-index: 10;
+    position: relative;
+}
+
+.contacto p {
+    color: #422f67;
+    max-width: 650px;
+    margin: 0 auto 2em auto;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    z-index: 10;
+    position: relative;
+}
+
+.formulario-contenedor {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 15; 
+    position: relative;
+}
+
+.formulario-grupo {
+    margin-bottom: 25px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.formulario-campo {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #9082a6; 
+    border: none;
+    border-radius: 25px;
+    color: #fff; /* Color de la letra escrita */
     font-size: 1rem;
-    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 50px; 
+}
+
+textarea.formulario-campo {
+    min-height: 50px; 
+    resize: none; 
+    padding-top: 15px;
+}
+
+/* Contenedor del botón (solo usado para la versión móvil/centrada) */
+.boton-enviar-contenedor {
+    display: flex;
+
+    justify-content: center; 
+    align-items: center; 
+    max-width: 100%; 
+    margin: 20px auto; 
+    position: relative; 
+}
+
+/* ESTILOS DEL BOTÓN DE ENVIAR (Rectángulo morado oscuro) */
+.boton-enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: #422f67; 
+    color: #fff;
+    border: none;
+    
+    /* AJUSTE CLAVE: Botón más redondo */
+    border-radius: 20px; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 130px; 
+    height: 50px; 
+    flex-direction: row; 
+    
+    /* Posicionamiento por defecto (Desktop) */
+    position: absolute; 
+    right: -150px; 
+    top: 60px; 
+}
+
+/* --- NUEVA CLASE PARA LA IMAGEN <IMG> DE LA BOTELLA DECORATIVA --- */
+.botella-decorativa {
+    position: absolute;
+    z-index: 20;
+    right: 90px;
+    display: none; /* Por defecto, oculta */
+}
+
+
+/* --- FONDO Y ELEMENTOS GRÁFICOS (AJUSTADOS) --- */
+
+.contacto-fondo {
+    position: absolute;
+    /* AJUSTE: Mueve el fondo del mar hacia abajo para que cubra el footer */
+    bottom: -150px; 
+    left: 0;
+    width: 100%;
+    height: 120%; /* Asegura que el área de la imagen sea grande */
+    
+    background-image: url('../image/fondo-barco-mar_Mesa\ de\ trabajo\ 1.svg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 1; /* Detrás del contenido */
+}
+
+.velero {
+    position: absolute;
+    bottom: 300px; 
+    left: 15%; 
+    width: 80px; 
+    height: auto;
+    z-index: 2; 
+}
+
+/* ---------------------------------------------------------------------- */
+/* -------------------------- SECCIÓN DE FOOTER ------------------------- */
+/* ---------------------------------------------------------------------- */
+
+.footer {
+    background-color: #422f67; 
+    color: #fff;
+    padding: 1.5em 2em; 
+    width: 100%;
+    
+    /* AÑADIDO: Imagen de Fondo al Footer */
+    background-image: url('../image/fondo-footer.svg'); /* REEMPLAZA ESTA RUTA CON LA TUYA */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative; 
+    z-index: 10; /* Asegura que el footer esté encima del fondo de contacto */
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* --- Logo y Texto de la Marca --- */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: -2%;
+}
+
+.logo-icono {
+    width: 25px; 
+    height: 25px;
+    margin-right: 8px;
+}
+
+.logo-texto {
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap; 
+}
+
+/* --- Copyright --- */
+.copyright {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 1%;
+    margin-left: 20px;
+    white-space: nowrap;
+    display: none; 
+}
+
+/* --- Enlaces Legales --- */
+.footer-enlaces-legales {
+    display: flex;
+    gap: 20px; 
+}
+
+.enlace-legal {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+.enlace-legal:hover {
+    opacity: 0.8;
+}
+
+/* --- Redes Sociales --- */
+.footer-redes {
+    display: flex;
+    gap: 10px; 
+}
+
+.red-social-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff; 
+    border-radius: 50%; 
+    color: #422f67; 
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.red-social-icono:hover {
+    background-color: #f0f0f0;
+    color: #5d488a; 
+}
+
+
+/* ➡️ Media Query para Desktop/Tablet (>= 768px) */
+@media (min-width: 768px) {
+    
+    /* Contacto Desktop */
+    .formulario-grupo.mensaje {
+        position: relative;
+    }
+    .botella-decorativa.desktop {
+        display: block;
+        width: 120px; 
+        height: auto;
+        right: -230px; 
+        top: -20px; 
+    }
+    .botella-decorativa.movil {
+        display: none;
+    }
+    .boton-enviar {
+        position: absolute; 
+        right: -250px; 
+        top: 40px; 
+    }
+    .boton-enviar-contenedor {
+        display: none;
+    }
+    .velero {
+        bottom: 300px; 
+    }
+    
+    /* Footer Desktop */
+    .copyright {
+        display: inline; 
+    }
+    .footer-info-legal {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-contenido {
+        justify-content: space-between;
+    }
+}
+
+/* ➡️ Media Query para Móvil (<= 767px) */
+@media (max-width: 767px) {
+    
+    /* Contacto Móvil */
+    .botella-decorativa.desktop {
+        display: none;
+    }
+    .boton-enviar-contenedor {
+        display: flex;
+        flex-direction: column; /* Apila la botella y el botón */
+        justify-content: center; 
+        align-items: center; 
+        max-width: 100%; 
+        margin: 20px auto; 
+        position: relative; 
+    }
+    .botella-decorativa.movil {
+        display: block;
+        width: 60px;
+        height: auto;
+        position: static; /* Controlado por Flexbox */
+        bottom: unset; 
+        left: unset;
+        transform: none; 
+        margin-bottom: 10px; 
+    }
+    .boton-enviar {
+        position: static;
+        margin-top: 0; 
+    }
+    .velero {
+        bottom: 250px;
+        left: 5%;
+        width: 60px;
+    }
+    
+    /* Footer Móvil */
+    .footer-contenido {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
+    .footer-info-legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .footer-enlaces-legales {
+        flex-direction: column;
+        gap: 5px;
+        margin: 5px 0;
+    }
 }
